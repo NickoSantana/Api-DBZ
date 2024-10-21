@@ -8,13 +8,14 @@ import { FakestoreService } from '../servicios/fakestore.service';
 })
 export class HomePage implements OnInit {
   fakeStoreService = inject(FakestoreService)
-  personajes: any[] = []
+  personajes: any[] = [];
   constructor() {}
 
   ngOnInit() {
-    this.fakeStoreService.obtenerPersonaje().subscribe((personajes)=>{
-      console.log(personajes);
-      this.personajes = personajes;
+    //Se cambia personajes por data en subscribe() y se agrega tipado :any
+    this.fakeStoreService.obtenerPersonaje().subscribe((data: any)=>{
+      console.log(data);
+      this.personajes = data.items; //La respuesta de la api es un objeto con varias clave:valor. la clave items constiene los personajes.
     })
     
   }

@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+// Se agrega propiedades a img para achicar fotos
+img {
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+}

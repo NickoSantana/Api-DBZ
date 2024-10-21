@@ -6,11 +6,9 @@ import { inject, Injectable } from '@angular/core';
 })
 export class FakestoreService {
   httpClient = inject(HttpClient);
-  private url = 'https://www.dragonball-api.com/api'
+  private url = 'https://dragonball-api.com/api/characters'; //Correcion de direccion: era sin www., y se agregó /characters al final
   constructor() { }
   obtenerPersonaje(){
-    return this.httpClient.get<any[]>(this.url,
-
-    );
+    return this.httpClient.get<any[]>(this.url);
   }
 }
