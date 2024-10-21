@@ -1,0 +1,7 @@
+{
+  "name": "dragonBall",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

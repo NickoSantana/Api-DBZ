@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Personajes de Dragon Ball Z
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    @for (personaje of personajes; track personaje){
+      <ion-item>
+        <ion-card>
+          <ion-card-header>
+            <img src="{{personaje.image}}" alt="">
+            <ion-card-title>{{personaje.name}}</ion-card-title>
+            <ion-card-subtitle>{{personaje.ki}}</ion-card-subtitle>
+            <ion-card-subtitle>{{personaje.race}}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{personaje.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-item>
+    }
+  </ion-list>
+
+
+
+
+</ion-content>
